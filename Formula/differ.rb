@@ -5,21 +5,21 @@
 class Differ < Formula
   desc "Terminal UI git diff viewer"
   homepage "https://github.com/jansmrcka/differ"
-  version "1.0.0"
+  version "1.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/JanSmrcka/differ/releases/download/v1.0.0/differ_darwin_amd64.tar.gz"
-      sha256 "d68560f6df3decb17a2382f6b7cb30e7a9528fb40d3488565438362b47880204"
+      url "https://github.com/JanSmrcka/differ/releases/download/v1.1.0/differ_darwin_amd64.tar.gz"
+      sha256 "371e77b435d876d0abe20ff0e252e5eddc43285f4826c909e2022b4526c387ec"
 
       def install
         bin.install "differ"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/JanSmrcka/differ/releases/download/v1.0.0/differ_darwin_arm64.tar.gz"
-      sha256 "8d2fa7a7c339fa54b85bfec3ddf813fa71b65c4914e4d4dc3cee0a27c4a3a9a0"
+      url "https://github.com/JanSmrcka/differ/releases/download/v1.1.0/differ_darwin_arm64.tar.gz"
+      sha256 "e4bd7790711374e367ba9db32a7f13184a1fb05b1e52f7ab9771f4fc3a076e0c"
 
       def install
         bin.install "differ"
@@ -29,15 +29,15 @@ class Differ < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/JanSmrcka/differ/releases/download/v1.0.0/differ_linux_amd64.tar.gz"
-      sha256 "2274bda10e0ebb659c75c18deae8849de7de2f159ac3deb7d7ff9a2254678d79"
+      url "https://github.com/JanSmrcka/differ/releases/download/v1.1.0/differ_linux_amd64.tar.gz"
+      sha256 "90581a3939ecb356134c793ad7a233f20fcc432564dcaa3f6a7f2f6cefdde503"
       def install
         bin.install "differ"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/JanSmrcka/differ/releases/download/v1.0.0/differ_linux_arm64.tar.gz"
-      sha256 "f2a498b4c590b4bf5be8c3d4c1fb168ff122ef39cdb8ad756ebdbe3cad0ae833"
+      url "https://github.com/JanSmrcka/differ/releases/download/v1.1.0/differ_linux_arm64.tar.gz"
+      sha256 "48852d201a280f1a1519835f7f6504581b548c97fe98ea29c61a9440e7c77d46"
       def install
         bin.install "differ"
       end
