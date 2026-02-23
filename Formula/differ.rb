@@ -5,23 +5,23 @@
 class Differ < Formula
   desc "Terminal UI git diff viewer"
   homepage "https://github.com/jansmrcka/differ"
-  version "1.1.0"
+  version "1.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/JanSmrcka/differ/releases/download/v1.1.0/differ_darwin_amd64.tar.gz"
-      sha256 "371e77b435d876d0abe20ff0e252e5eddc43285f4826c909e2022b4526c387ec"
+      url "https://github.com/JanSmrcka/differ/releases/download/v1.2.0/differ_darwin_amd64.tar.gz"
+      sha256 "3477ccbfd4cdd5b9980bbee101f22b004e98b5a2df38d580772b54f32b082088"
 
-      def install
+      define_method(:install) do
         bin.install "differ"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/JanSmrcka/differ/releases/download/v1.1.0/differ_darwin_arm64.tar.gz"
-      sha256 "e4bd7790711374e367ba9db32a7f13184a1fb05b1e52f7ab9771f4fc3a076e0c"
+      url "https://github.com/JanSmrcka/differ/releases/download/v1.2.0/differ_darwin_arm64.tar.gz"
+      sha256 "1cc4835243905351d0a853bb57a62ad61c6b866d4bc7c881dff2b9d3c5e3b5d7"
 
-      def install
+      define_method(:install) do
         bin.install "differ"
       end
     end
@@ -29,16 +29,16 @@ class Differ < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/JanSmrcka/differ/releases/download/v1.1.0/differ_linux_amd64.tar.gz"
-      sha256 "90581a3939ecb356134c793ad7a233f20fcc432564dcaa3f6a7f2f6cefdde503"
-      def install
+      url "https://github.com/JanSmrcka/differ/releases/download/v1.2.0/differ_linux_amd64.tar.gz"
+      sha256 "e6216d13d461caf25d385050a7a9417646fbc843e2a858d6bd4ddaf677a210f0"
+      define_method(:install) do
         bin.install "differ"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/JanSmrcka/differ/releases/download/v1.1.0/differ_linux_arm64.tar.gz"
-      sha256 "48852d201a280f1a1519835f7f6504581b548c97fe98ea29c61a9440e7c77d46"
-      def install
+      url "https://github.com/JanSmrcka/differ/releases/download/v1.2.0/differ_linux_arm64.tar.gz"
+      sha256 "8d9a5b844a18c25c9c229dde0d2dc0bc956c3e170d77f596a92dd42d91f196c5"
+      define_method(:install) do
         bin.install "differ"
       end
     end
