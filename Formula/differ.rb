@@ -5,21 +5,21 @@
 class Differ < Formula
   desc "Terminal-native review interface for Git changes"
   homepage "https://github.com/jansmrcka/differ"
-  version "1.8.0"
+  version "1.8.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/JanSmrcka/differ/releases/download/v1.8.0/differ_darwin_amd64.tar.gz"
-      sha256 "aeb6809fda6ca94ed57e59c679f9d85b3cc38a2c1440f71a2a0b2973ad15e01a"
+      url "https://github.com/JanSmrcka/differ/releases/download/v1.8.1/differ_darwin_amd64.tar.gz"
+      sha256 "c70a37e42dbf28dea4a75ffe4a37a8704ed85c22587df5b7f0e464b1221c2fef"
 
       define_method(:install) do
         bin.install "differ"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/JanSmrcka/differ/releases/download/v1.8.0/differ_darwin_arm64.tar.gz"
-      sha256 "1af30d5eaf11307bdd9a95bec9e151f5df03030cb4dfc4f8cbd08df95f901a91"
+      url "https://github.com/JanSmrcka/differ/releases/download/v1.8.1/differ_darwin_arm64.tar.gz"
+      sha256 "f99949599b9991bffb187377dec8724bb105037c862f6a5eac962fcc7d74a6c9"
 
       define_method(:install) do
         bin.install "differ"
@@ -29,15 +29,15 @@ class Differ < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/JanSmrcka/differ/releases/download/v1.8.0/differ_linux_amd64.tar.gz"
-      sha256 "e65f326a0b68f8553a80c49851b18db31a744c901f0c92d3d3b981572bedf276"
+      url "https://github.com/JanSmrcka/differ/releases/download/v1.8.1/differ_linux_amd64.tar.gz"
+      sha256 "4aef0a1ec1199f90c7fe4633ebe883ca3980089bd9cc63ff767e79f2d983aefa"
       define_method(:install) do
         bin.install "differ"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/JanSmrcka/differ/releases/download/v1.8.0/differ_linux_arm64.tar.gz"
-      sha256 "0bdded7ae58f0d8920c5b60c9062d664ea43cd0f809c7484dd047af653c8e090"
+      url "https://github.com/JanSmrcka/differ/releases/download/v1.8.1/differ_linux_arm64.tar.gz"
+      sha256 "fba70afbffc2def6e93a08a612ae7dbf56c2370fb1d7ffbea9cd5a6812b16696"
       define_method(:install) do
         bin.install "differ"
       end
